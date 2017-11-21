@@ -1,0 +1,85 @@
+/**index.wxss**/
+/*header*/
+
+.header{  background-color: #efc36f; display: block;}
+.header .location{
+  box-sizing: border-box;
+  font-weight: 900;
+  height:75rpx; line-height: 75rpx;
+  width:750rpx;
+  padding-left: 0rpx;
+}
+.header .location  .addr image{ width:37.5rpx; height:50rpx; vertical-align: -10rpx;}
+.header .location .addr{ float:left; width:485rpx; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.header .location .weather{ float:right; width:200rpx; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.header .location .weather image{ vertical-align:-11rpx;}
+
+.loading{ height: 20px; margin-top: 5px; width:750rpx; background-color: #fff;
+ background:#fff url(../images/loading.gif) no-repeat center;
+ background-size: contain;
+}
+
+
+.header .search{ height: 70rpx; margin-top: 10rpx; color:#ccc; line-height: 70rpx; text-align: center; }
+.header .search navigator{ width:600rpx; height:100%; background-color:#fff; margin: 0 auto; border-radius: 40rpx;}
+
+
+.header .quicklink{ padding:10rpx 75rpx;}
+.header .quicklink navigator{ display:inline-block; padding:0rpx 15rpx;}
+.header .quicklink .hv{ background-color: transparent;}
+
+.businesslist{ margin-bottom: 20rpx; background-color: #fff; position:relative; left: 0; top: 0; overflow: hidden;
+ width:750rpx;
+}
+.businesslist .inner{ position: relative; left: 0; top: 0; width:1000px; overflow: hidden; }
+.businesslist .inner .li{ width:750rpx; float:left; overflow: hidden;  }
+.businesslist .inner .li navigator{ width:187.5rpx; float:left; text-align: center; }
+.businesslist .inner .li navigator image{ width:130rpx; height:130rpx; padding-top:20rpx; }
+.businesslist .inner .li navigator view{ font-size: 14px; line-height: 16px; color:#333;}
+
+.businesslist .ctrl{ height:50rpx; width:750rpx;  text-align: center; margin-top:10rpx;}
+.businesslist .ctrl view{ display: inline-block; width:20rpx; height:20rpx; margin:0 10rpx; border-radius: 50%; background-color: #eee; }
+.businesslist .ctrl .active{ background-color: #ccc;}
+
+
+/*推荐商家*/
+.recommend{ background-color:#fff; padding:0 15rpx; width:720rpx; color:#333;}
+
+.recommend .title{ font-size:36rpx; line-height:60rpx; border-bottom:1px solid #ccc;}
+.bslist{ width:100%; }
+.bslist .list{ border-bottom:1px solid #ccc; padding:35rpx 0px; overflow:hidden;}
+.bslist .list .pic{ width:180rpx; float:left; text-align:center;}
+.bslist .list .pic image{ width:150rpx; height:150rpx; border:1px solid #ccc; }
+.bslist .list .txt{ width:540rpx; float:left;}
+.bslist .list .txt .h2{ font-weight:900; font-size:36rpx; line-height:50rpx;}
+.bslist .list .txt .h2 .ticket{ float:right; width:36rpx; height:36rpx; background:url(../images/piao.png) no-repeat center;
+background-size:contain; opacity:0.4;}
+.bslist .list .txt .sell{ height:30rpx; padding-top: 10rpx; }
+.bslist .list .txt .sell view{ display: inline-block; vertical-align:middle; margin-right:8rpx;  }
+.bslist .list .txt .sell .star{ background-color:#ddd; height:30rpx; width:150rpx; 
+position:relative; z-index:300; overflow: hidden;}
+.bslist .list .txt .sell .star image{ position:absolute; left:0; top:0; 
+width:101%; height:102%; z-index:350; display: block;}
+.bslist .list .txt .sell .star .bg{ position:absolute; left:0; top:0; width:60%; height:100%; 
+z-index:320; background-color:#efc36f; display: block;}
+
+.bslist .list .txt .sell .score{ font-size:27rpx; color:#efc36f;}
+.bslist .list .txt .sell .total{ font-size:27rpx; color:#ccc;}
+
+.bslist .list .txt .info{ height:50rpx; line-height:50rpx; margin-top:10rpx; 
+border-bottom:1px dotted #ccc;font-size:22rpx; color:#ddd; padding-bottom:10rpx;
+margin-bottom:10rpx; }
+.bslist .list .txt .info view{   display:inline-block; vertical-align:middle; color:#333; }
+.bslist .list .txt .info .address{float:right; color:#efc36f; font-size:20rpx; line-height:25rpx; padding-top:10rpx;}
+.bslist .list .txt .info .address text{color:#ccc;}
+
+.bslist .list .txt .hui{ height:50rpx; line-height:50rpx; color:#333; font-size:24rpx;}
+.bslist .list .txt .hui text{ display:inline-block;}
+.bslist .list .txt .hui .less{ padding:8rpx; border-radius:10rpx; 
+color:#fff; background-color:#dc6e6e;line-height:24rpx; margin-right:10rpx;}
+.bslist .list .txt .other{ height:50rpx; line-height:50rpx; color:#333;}
+
+.bslist .list .txt .other{ height:50rpx; line-height:50rpx; color:#333; font-size:24rpx;}
+.bslist .list .txt .other text{ display:inline-block;}
+.bslist .list .txt .other .less{ padding:8rpx; border-radius:10rpx; 
+color:#fff; background-color:#dc6e6e;line-height:24rpx; margin-right:10rpx;}

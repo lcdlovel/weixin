@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var isPrime=(function(){
+        var hash={};
+        return function(n){
+            if(!isNaN(n)&&n>1){
+                if(n<3) return true;
+                else if(n%2==0) return false;
+                else if(hash[n]!==undefined){
+                    console.log("不用执行循环...");
+                    return hash[n];
+                }else{
+                    console.log("执行for循环...");
+                    for(var i=3;i<=Math.sqrt(n);i+=2){
+                        if(n%i==0){
+                            hash[n]=false;
+																		console.log(hash);
+                            return false;
+                        }
+                    }
+                    hash[n]=true;
+										console.log(hash);
+                    return true;
+                }
+            }else
+            throw new Error(
+                "必须输入>1的数字"
+            )
+        }
+
+    })();
+		isPrime(113);
+		
+</script>
+</html>

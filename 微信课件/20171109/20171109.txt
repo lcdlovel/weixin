@@ -1,0 +1,140 @@
+1.回顾
+ 小程序
+    app.js    全局方法事件属性 4+1 App()
+		app.json  全局的配置
+		app.wxss  全局的样式
+ pages/
+       reg/reg.wxml   html
+			     reg.wxss   css
+					 reg.json   
+					 reg.js
+ utils/ util.js   abc.js
+
+ 12.6 reg.json 页面配置
+    @@@@ 可以没有
+		@@@@ {}
+		@@@@ 配置的属性 就是app.json window的大括号之内的内容
+
+ 12.7 reg.js 页面逻辑 10+1
+    @@@@ 
+     Page({}) 都必须有此方法
+    @@@@
+		 10个事件 onlaunch 小程序启动的那一刻  
+		          onload 每个页面启动
+              onLoad--->onShow
+
+      data  {} 页面变量对象
+			onLoad 当加载的时候 页面初始化的处理
+      onReady 初次渲染
+      onShow 当显示
+			onHide 隐藏
+			onUnload 当关闭页面
+      onPullDownRefresh 当下拉刷新
+      onReachBottom 触底
+			onShareAppMessage 当分享此页面
+			onPageScroll 当滚动
+
+自定义方法和属性
+2.和前端的区别
+  2.1事件区别
+	  web前端  div onclick="kkk()"  function kkk(){}
+    小程序   view bindtap="kkk"   kkk:function(){}
+  2.2修改内容
+	  没有DOM BOM jq zepto依赖于dom
+		  document window
+    {{kkk}}
+ web前端   div  id     function kkk(){  t.innerHTML="ddd"}
+  小程序   view {{xxx}}  kkk:function(){ this.setData({xxx:"ddd"})}
+
+
+  2.3修改颜色
+  web前端    div  id              function kkk(){  t.style.color="#f00"}
+  小程序     view style="color:{{d}}" kkk:function(){ this.setData({d:"#f00"})}
+
+	2.4获取原来的值
+	
+
+emmet  #abc .abc div*5 
+
+  2.5 传参
+  web前端  div onclick="kk(0)"  function kk(n){}
+   小程序 view bindtap="kk" id="a1" data-xy="0"
+	                     kk:function(e){
+											  e.currentTarget.id
+											 }
+                      kk:function(e){
+											e.currentTarget.dataset.xy
+											}
+  2.6 定时器
+   web前端  div onclick="kk(0)"  function kk(n){}
+	          setInterval  setTimeout
+    window.setInterval()
+   小程序   setInterval  setTimeout
+
+  ecmascript 核心类
+
+app.js 公共的方法
+ xxx.js 库
+
+var k=require("xxx.js")
+k.ccc()
+  2.7焦点 选项卡
+  2.8修改类
+	   web前端  div class="x"  t.className="active"
+	         
+   小程序    view class="{{y}}"  that.setData({y:"active"})
+  
+  2.9DOM添加标记 删除标记
+    web前端   div            t.appendChild()
+		                           removeChild()
+															 createElement()
+															 insertBefore()
+    小程序    view          wx:if
+js 选择  if(){}
+         if(){}else{}
+				 if(){}else if(){} else if(){} else{}
+
+    for while do while fo in
+
+宿主  
+  js 浏览器  ecmascript DOM BOM
+  js Node.js ecmascript global http 
+	js asp     ecmascript Rquest 
+	js 小程序  ecmascript wx.
+	2.10 发送ajax请求
+	 前端 js new    jq $.ajax 
+	 小程序 wx.request({})
+ https://zhang.com/ddd/xx.php
+wx.request({
+  url: 'test.php', //仅为示例，并非真实的接口地址
+  data: {
+     page: 0 ,
+     y: ''
+  },
+  header: {
+      'content-type': 'application/json' // 默认值
+  },
+  success: function(res) {
+    console.log(res.data);
+		that.setData({
+		 kk:res.data
+		})
+  },
+	fail:function(res){},
+  complete:function(res){}
+})
+
+
+vw  vh
+显示器 100vw  100vh
+
+作业： 饿了么小程序
+
+3.上线
+ ####注册一个账号 mp.weixin.qq.com
+ ####登录进去 appid
+   设置--开发设置 	wxa503da876bc540c8
+ #### 用编辑软件 打开
+  项目栏目 预览 上传
+ #### 临时仓库
+  提交审核 

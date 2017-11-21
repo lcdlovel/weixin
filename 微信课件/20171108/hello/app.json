@@ -1,0 +1,44 @@
+{
+  "pages":[
+	  "pages/index/index",
+	  "pages/logs/logs",
+		"pages/login/login"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f00",
+    "navigationBarTitleText": "北京薪资计算器",
+    "navigationBarTextStyle":"white",
+		"backgroundColor":"#ccc",
+		"enablePullDownRefresh":true,
+		"onReachBottomDistance":200
+  },
+  "tabBar":{
+	  "color":"#ccc",
+		"selectedColor":"#000",
+	  "backgroundColor":"#fff",
+		"borderStyle":"black",
+		"position":"bottom",
+    "list":[
+		  {  "pagePath":"pages/index/index",
+				 "text":"首页",
+				 "iconPath":"pages/images/s.png",
+				 "selectedIconPath":"pages/images/s_s.png"
+			},
+		  {  "pagePath":"pages/logs/logs",
+				 "text":"搜索",
+				 "iconPath":"pages/images/o.png",
+				 "selectedIconPath":"pages/images/o_s.png"
+			}
+		]
+	}
+	,
+	"networkTimeout":{
+	  "request":60000,
+		"connectSocket":60000,
+		"uploadFile":60000,
+		"downloadFile":60000
+	},
+	"debug":true
+}

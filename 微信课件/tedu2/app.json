@@ -1,0 +1,14 @@
+{
+  "pages":[
+   "pages/index/index",
+    "pages/wel/wel",
+     
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "达内高端班欢迎你",
+    "navigationBarTextStyle":"black"
+  }
+}

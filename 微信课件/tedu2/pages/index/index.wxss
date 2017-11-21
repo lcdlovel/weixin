@@ -1,0 +1,47 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/*自定义样式*/
+page{ background-color:#fafafa; font-family: "微软雅黑";
+ line-height: 1.3;
+}
+.title{ font-size: 50rpx; line-height:50rpx; font-weight: 900; font-family: "微软雅黑"; color: #ddd;}
+/*中部*/
+.main{
+ padding-top:10px; 
+ padding-bottom:50px;
+ width:94%; padding-left:3%;
+ padding-right:3%;
+}
+form{ display: block; width: 100%;}
+.list{ margin-bottom: 30px;}
+.list-title{ border-bottom:1px solid #ddd; padding-bottom: 8px;
+margin-bottom: 5px;}
+.list-content label{ display: block; margin-top: 10px; margin-bottom: 10px;}
+.list textarea{ border:1px solid #ddd; border-radius: 2px; padding:5px; width:calc(100% - 12px);}
+/*底部*/
+.bottom{ position: fixed; bottom:0rpx; width:100%; left:0; display:flex; flex-direction: row; padding-top:5px; padding-bottom: 5px;
+background-color:rgba(68,68,68,0.5);}
+
+/*倒计时*/
+.time{
+  width:120px; height:30px; position:fixed; right:0px; bottom:56px; background-color: rgba(68,68,68,0.2); line-height: 30px; text-align: center; color:white;
+}

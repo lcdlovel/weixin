@@ -1,0 +1,130 @@
+<!--index.wxml-->
+<view class="container">
+  <!--
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  -->
+   
+  <!--标题部分-->
+  <view class="title">
+    达内高端班测试系统
+  </view>
+ <form  bindsubmit="sub" bindreset="EventHandle" >
+<!--正文部分-->
+<view class="main">
+    <!--<view class="list">
+      <view class="list-title">
+         <text class="list-title-order">1</text>.
+         <text class="list-title-cnt">web前端技术总共包含哪些板块？测试长文本你看这里的长文本？我们如何看待长文本长文本</text>
+      </view>
+      <view class="list-content">
+        <radio-group bindchange="radioChange">
+           <label class="radio" wx:for="{{items}}">
+               <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+           </label>
+        </radio-group>
+      </view>
+    </view>-->
+   <block wx:for="{{lists}}" wx:for-item="list" wx:for-index="idx" wx:key="unique">
+
+    <block  > 
+     <view class="list"  hidden="{{idx!=now}}">
+      <view class="list-title">
+         <text class="list-title-order">{{idx+1}}</text>.
+         <text class="list-title-cnt">{{list.ask}}</text>
+      </view>
+      <view class="list-content">
+        <block wx:if="{{list.type==1}}">
+          <!--单选题目-->
+           <radio-group name="{{list.askID}}" bindchange="radioChange">
+           <label class="radio" name="dd" wx:for="{{list.items}}" wx:for-item="item">
+                      <radio value="{{item.name}}"  checked="{{item.checked}}"/>{{item.value}}
+            </label>
+         </radio-group>
+        </block>
+      <block wx:elif="{{list.type==2}}">
+          <!--多选题目-->
+           <checkbox-group name="{{list.askID}}" bindchange="radioChange">
+           <label class="radio" wx:for="{{list.items}}" wx:for-item="item">
+                      <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+            </label>
+         </checkbox-group>
+        </block>  
+       
+      <block wx:elif="{{list.type==3}}">
+          <!--判断题目-->
+           <radio-group name="{{list.askID}}" bindchange="radioChange">
+           <label class="radio" wx:for="{{list.items}}" wx:for-item="item">
+                <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+            </label>
+         </radio-group>
+        </block>  
+         
+     <block wx:elif="{{list.type==4}}">
+          <!--问答题目-->
+           <textarea name="{{list.askID}}" bindinput="radioChange" />
+        </block> 
+
+
+      </view>
+     </view>
+
+    </block>
+
+   </block>
+</view>
+
+  <view class="bottom">
+    <button class="" bindtap="prev" type="primary" disabled="{{prevbtn}}">上一题</button>
+    <button class="" bindtap="next" type="primary" disabled="{{nextbtn}}">下一题</button>
+    <button class="" bindtap="" type="primary" form-type="submit" style="display:{{subds}}" >提交</button>
+  </view>
+  <!--倒计时-->
+ <view class="time">
+  {{timeStr}}
+ </view>
+
+<!-- 黑框提示并消失 -->  
+    <toast hidden="{{toast1Hidden}}" bindchange="toast1Change">  
+        {{notice_str}}  
+    </toast>  
+    <!-- 确认框 及 提示框 -->  
+    <view class="page__bd">  
+        <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">  
+            确认提交么？  
+        </modal>  
+        <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">  
+            <view> 提示 </view>  
+            <view> 清空成功 </view>  
+        </modal>  
+    </view>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+</view>
+  

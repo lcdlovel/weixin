@@ -1,0 +1,26 @@
+1.<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+2.微信sdk帮助文档
+http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+3.根据基本配置里面的
+ appid
+ AppSecret
+4.到开发者工具-在线接口调试工具
+https://mp.weixin.qq.com/debug
+https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=secret 
+生成access_token
+ date
+5.根据这两个值到
+https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=你的access_token&type=jsapi
+
+生成json数据 ticket也就是jsapi_ticket
+
+6.到
+http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign
+进行其他变量的获取
+signature
+noncestr
+timestamp
+
+7.进行配置
+8.进行调用
+

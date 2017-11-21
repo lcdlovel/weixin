@@ -1,0 +1,29 @@
+.header{ width:750rpx; height:280rpx; 
+background-color:#0f0;}
+.title{ width:750rpx; height:80rpx;
+background-color:#0ff;}
+.cnt{ width:750rpx; height:calc(100vh - 360rpx);
+background-color:#f09;}
+ .cnt .left{ width:250rpx; float:left; height:100%;
+  background-color:#909;overflow-y:scroll;
+	overflow-x:hidden;	}
+	.cnt .left view{ height:50px; text-align:center;
+	 border-left:2px solid transparent;
+	 background-color:#ccc; color:#333; 
+	 line-height:50px;border-bottom:1px solid #ddd;	}
+	.cnt .left .active{
+	 border-left:2px solid #00a; color:#000;
+	}
+ .cnt .right{ width:500rpx; float:left; height:100%;
+  background-color:#990;	overflow-y:scroll;
+	overflow-x:hidden;
+	}
+ .cnt .right .one{
+  width:100%; height:140px; background-color:#ff0;
+	border-bottom:1px solid #f00;
+ }
+ .one .pic{ width:130rpx;height:130rpx; float:left;}
+ .one .pic image{ width:110rpx; height:110rpx;
+  padding-top:10rpx; padding-left:10rpx;
+ }
+ .one .txt{ width:370rpx;height:100%; float:left;}

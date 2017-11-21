@@ -1,0 +1,14 @@
+<view class="container">
+  
+<view class="infor3">
+	 <view class="price">30.0</view>
+	 <view class="ctrl">
+			<view class="ctrl_lf" style="display:{{sh}}">
+				<view class="ctrl_m" bindtap="jian">-</view>
+				<view class="ctrl_n">{{num}}</view>
+			</view>
+			<view class="ctrl_rt" bindtap="jia">+</view>
+	 </view>
+</view>
+
+</view>

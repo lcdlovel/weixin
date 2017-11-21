@@ -1,0 +1,71 @@
+<view class="container">
+  <view class="header">商家log</view>
+  <view class="title">选项卡</view>
+  <view class="cnt">
+	  <view class="left">
+		  <view class="active" bindtap="ch"
+			data-x='推荐'
+			>推荐</view>
+			<view class="" bindtap="ch"
+			data-x="时令蔬菜"
+			>时令蔬菜</view>
+			<view>推荐</view>
+			<view>时令蔬菜</view>
+			<view>推荐</view>
+			<view>时令蔬菜</view>
+			<view>推荐</view>
+			<view>时令蔬菜</view>
+			<view>推荐</view>
+			<view>时令蔬菜</view>
+			<view>推荐</view>
+			<view>时令蔬菜</view>
+			<view>推荐</view>
+			<view>时令蔬菜</view>
+			<view>推荐</view>
+			<view>时令蔬菜</view>
+		</view>
+	  <view class="right">
+
+<block wx:for="{{list}}">
+			<view class="one">
+			  <view class="pic">
+				  <image src="{{item.pic}}"></image>
+				</view>
+				<view class="txt">
+				  <view>{{item.name}}</view>
+					<view>{{item.price}}</view>
+					<view data-x="0">+</view>
+				</view>
+			</view>
+</block> 
+      <view class="one">
+			  <view class="pic">df</view>
+				<view class="txt">df</view>
+			</view>
+
+			<view class="one">
+			  <view class="pic">df</view>
+				<view class="txt">df</view>
+			</view>
+
+			<view class="one">
+			  <view class="pic">df</view>
+				<view class="txt">df</view>
+			</view>
+
+
+			<view class="one">
+			  <view class="pic">df</view>
+				<view class="txt">df</view>
+			</view>
+
+
+			<view class="one">
+			  <view class="pic">df</view>
+				<view class="txt">df</view>
+			</view>
+
+		
+		</view>
+	</view>
+</view>

@@ -1,0 +1,155 @@
+1.微信公众号的维护和开发
+   订阅号(企业) 菜单可以自定义  可以调用特殊的接口
+	 服务号(企业) 菜单可以自定义  可以调用特殊的接口
+2.安全域名
+  weixin.js
+  wx.config({
+	 
+	})
+  wx.ready(function(){   })
+3.commonweb5.php
+  自定义公众号调用
+
+##写好页面
+##拷贝commonweb5.php
+##引入微信 weixin.js
+##写
+<script>
+   var a=document.createElement("script")
+   a.src="commonweb5.php?page="+window.location.href
+document.getElementsByTagName("head")[0].appendChild(a)
+ </script>
+## 写调用接口
+## appid  appsec 修改成自己公司的值
+
+
+4.
+http://xwkj.org.cn/weixin/pro1/glhy.html
+http://xwkj.org.cn/weixin/pro2/glhy.html
+http://xwkj.org.cn/weixin/pro3/glhy.html
+    1991   1996
+5.微信小程序 2017-01-09
+6.微信--我--设置--关于微信 6.5.4 
+  发现--小程序--
+京东购物
+饿了么
+摩拜单车
+腾讯自选股票
+滴滴出行
+美团外卖
+
+北京新资计算器
+小年糕
+7.是什么?
+  运行于微信中的程序。软件~~~~支付宝~~~qq
+8.为何?
+8.1
+	@@@ 为了区别公众号 
+	   公众号 只能局限于微信中，而且只能做微信中的导航
+  @@@ 提供更多的自定义开发的权限
+  @@@ 挤占其它app开发
+8.2特点
+  @@@ 小 1M
+	@@@ 节省人力 时间
+      android ios sql 服务器 美工
+      100W
+  @@@ 兼容性好
+  @@@ 不需要下载   
+  @@@ 频率低 安全性低 交互性低
+9.如何做?
+  微信开发者工具
+qq.com
+
+mp.weixin.qq.com
+  小程序---开发---工具--微信开发者工具
+https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html
+ftp day02
+172.163.0.155/wxw
+
+10.微信扫描二维码
+   新建本地小程序
+	 +
+   无id
+   目录 空文件
+ 文件组成
+ 找到能够修改 hello  张三
+
+11.文件组成
+  js    功能 
+	json  配置
+	wxml  布局 html huper text markup language
+weixin markup language 标记名称
+    view image input form text map checkbox
+	wxss  样式 css
+weixin stylesheet
+
+12.目录结构
+  xinzi/
+	     app.js    小程序加载的业务  名字不能改
+			 app.json  小程序全局配置    名字不能改
+			 app.wxss  全局样式         名字不能改 删掉
+       /utils/工具库文件夹
+			 /pages/xxx页面/ 
+			               xxx.js   页面js
+										 xxx.json 页面配置
+										 xxx.wxml 页面布局
+										 xxx.wxss 页面css
+             /xxx页面/ 
+			               xxx.js
+										 xxx.json
+										 xxx.wxml
+										 xxx.wxss
+12.1  mp.weixin.qq.com
+      小程序 开发 框架
+ app.json 全局配置文件 json
+    "pages":[] 路径 pages/login/login 注册页面
+		 $$$不注册的页面无法跳转过去
+		 $$$写到第一个的是首页
+    "window"
+		"tabBar"  选项卡栏目
+pages/images/图片
+    "networkTimeout"  超时时间
+12.2 app.js 全局的东西
+ App({
+   onLaunch:fn,//初始化的东西 本地存储 得到手机状态
+	 onShow:fn,
+	 onHide:fn,
+	 onError:fn,
+   abc:fn,
+	 dd:34
+ })
+
+var s=getApp();
+s.abc
+
+查看网络状态
+
+console 调试
+source 资源
+network 网络
+
+12.3 app.wxss 全局样式表  link href 
+每个页面自动引用app.wxss
+每个页面再次引用同名 xxx.wxss
+    common.css
+ rpx 所有手机屏幕 750rpx 100%
+  屏幕宽750px
+	 1rpx===?px
+	 360px
+12.4 xxx.wxss  
+12.5 xxx.wxml
+   写一个页面
+  打开 文件 拖拽
+	ctrl+r 
+	右键 像素
+  ctrl+alt+i  750
+  拉参考线   移动工具
+	alt+滚轮
+	f8
+  5工具右键 三个 切片工具
+	ctrl+alt+shift+s
+	   jpeg   品质60
+  存储
+	名字 默认设置 仅限图片 选中的切片
+
+

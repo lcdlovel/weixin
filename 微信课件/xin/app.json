@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#006400",
+    "navigationBarTitleText": "北京薪资计算器",
+    "navigationBarTextStyle":"#fff"
+  },
+  "debug":false
+}

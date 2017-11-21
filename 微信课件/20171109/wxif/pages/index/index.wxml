@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="" id="" data-x=""
+	  wx:if="{{zz}}"
+	>1231</view>
+
+<block wx:if="{{zz}}">
+   <view class="" id="" data-x="">1231</view>
+</block>
+
+  <view class="" id="" data-x=""
+	  wx:if="{{false}}"
+	>1231</view>
+	<view wx:else>456</view>
+
+
+<block wx:if="{{false}}">
+ <view class="" id="" data-x="">1231</view>
+</block>
+<block wx:else>
+ <view>456</view>
+</block>
+
+
+  <view class="" id="" data-x=""
+	  wx:if="{{false}}"
+	>1231</view>
+	<view class="" id="" data-x=""
+	  wx:elif="{{false}}"
+	>1231</view>
+	<view class="" id="" data-x=""
+	  wx:elif="{{false}}"
+	>1231</view>
+	<view wx:else>456</view>
+
+
+
+<view>123</view>
+<view>123</view>
+<view>123</view>
+<view>123</view>
+<view>123</view>
+{{index}}
+<view wx:for="{{abc}}" wx:for-index="i"
+wx:for-item="m">
+   1234{{index}}::{{m}}</view>
+
+<block wx:for="{{abc}}" wx:for-index="i"
+wx:for-item="m">
+  <view>1234{{index}}::{{m}}</view>
+</block>
+
+
+
+<view wx:for="{{mn}}" wx:for-index="i"
+wx:for-item="m">
+   1234{{i}}::{{m.id}}::{{m.price}}
+	  <image src="{{m.src}}"></image>
+	 </view>
+
+
+</view>

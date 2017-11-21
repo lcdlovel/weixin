@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="shu">
+   <text>薪资</text> 
+   <input value="{{xin}}" bindfocus="fs" type="number" bindinput="kd" placeholder="请输入工资" />
+  </view>
+  <view class="shu">
+   <text>社保基数</text> <input type="number" value="{{shexin}}" 
+    bindinput="kd1" bindblur="bb1"/>
+  </view>
+  <view class="shu">
+   <text>公积金基数</text> 
+   <input value="{{gongxin}}" type="number" bindinput="kd2" bindblur="bb2" />
+  </view>
+ <button class="btn" type="primary" size="mini"
+  bindtap="cl">计算</button>
+
+  <view class="result" wx:if="{{resultstatus}}">
+    <view class="shu">
+      <text>种类</text>
+      <text>个人缴纳</text>
+      <text>单位缴纳</text>
+    </view>
+    <view class="shu">
+      <text>老保</text>
+      <text>{{geren[0]}}(8%)</text>
+      <text>{{danwei[0]}}(19%)</text>
+    </view>
+    <view class="shu">
+      <text>医保</text>
+      <text>{{geren[1]}}(2%)</text>
+      <text>{{danwei[1]}}(10%)</text>
+    </view>
+    <view class="shu">
+      <text>失业保险</text>
+      <text>{{geren[2]}}(0.2%)</text>
+      <text>{{danwei[2]}}(0.8%)</text>
+    </view>
+    <view class="shu">
+      <text>公积金</text>
+      <text>{{geren[3]}}(12%)</text>
+      <text>{{danwei[3]}}(12%)</text>
+    </view>
+
+    <view class="shu">
+      <text>工伤</text>
+      <text>{{geren[4]}}</text>
+      <text>{{danwei[4]}}(0.4%)</text>
+    </view> 
+    
+    <view class="shu">
+      <text>生育</text>
+      <text>{{geren[5]}}</text>
+      <text>{{danwei[5]}}(0.8%)</text>
+    </view>
+
+    <view class="shu">
+      <text>小结</text>
+      <text>{{geren[6]}}</text>
+      <text>{{danwei[6]}}</text>
+    </view>
+
+    <view class="shu">
+      <text>应税收入</text>
+      <text>{{geren[7]}}</text>
+      <text></text>
+    </view>
+ 
+    <view class="shu">
+      <text>税收</text>
+      <text>{{geren[8]}}</text>
+      <text></text>
+    </view>
+
+    <view class="shu">
+      <text>实际收入</text>
+      <text>{{geren[9]}}</text>
+      <text></text>
+    </view>
+     <view class="shu">
+      <text>单位支出</text>
+      <text></text>
+      <text>{{danwei[7]}}</text>
+    </view>
+  </view>
+
+</view>

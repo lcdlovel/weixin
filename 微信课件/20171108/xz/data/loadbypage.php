@@ -1,0 +1,23 @@
+<?php
+header("Content-Type:application/json,charset=utf-8");
+require_once('init.php');
+@$persize=$_REQUEST['persize'];
+@$currentpage=$_REQUEST['currentpage'];
+if($persize=='')
+$persize=10;
+if($currentpage=='')
+$currentpage=1;
+$sql="select count(*) from xz_laptop";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_row($result);
+$count=$row[0];
+$size=ceil($count/$persize);
+$all=0;
+for($i=1;$i<$currentpage;$i++)
+$all+=$persize;
+$sql="select lid,(select sm from xz_laptop_pic where pid=lid) pic,video_card,title,spec,price from xz_laptop limit $all,$persize";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_all($result,MYSQLI_ASSOC);
+$row[]=$count;
+echo json_encode($row);
+?>

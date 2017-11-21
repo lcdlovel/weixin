@@ -1,0 +1,29 @@
+<view class="container">
+  <view bindtap="abc" id="k0" data-x="0" 
+	  style="color:{{b[0]}}">12</view>
+  <view bindtap="abc" id="k1" data-x="1" 
+	  style="color:{{b[1]}}">23</view>
+  <view bindtap="abc" id="k2" data-x="2" 
+	  style="color:{{b[2]}}">34</view>
+
+
+  <view>今天是{{time}}</view>
+
+
+ <view class="top">
+
+<block wx:for="{{lan}}">
+	<view class="{{cl[index]}}" 
+	   bindtap="chg" data-x="{{index}}">
+	{{item}}</view>
+</block>
+   
+ </view>
+ <view class="bottom">
+   <view wx:if="{{p==0}}">111</view>
+   <view wx:elif="{{p==1}}">222</view>
+	 <view wx:elif="{{p==2}}">333</view>
+ </view>
+
+
+</view>

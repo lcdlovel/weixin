@@ -1,0 +1,210 @@
+<!--index.wxml-->
+<view class="container">
+<!--头部区域-->
+  <view class="header">
+<!--天气和地理坐标-->
+     <view class="location">
+       <view class="addr"> 
+        <image src="../images/location.png"></image>
+       {{address}}</view>
+       <view class="weather">
+        <image src="{{tu}}" style="width:70rpx; height:50rpx;"></image>
+       {{weather}}</view>
+     </view>
+<!--搜索-->
+  <view class="search">
+    <navigator url="/pages/search/search">
+    <image src="../images/search.png" style="width:40rpx; height:40rpx; vertical-align:-8rpx;"></image>
+    搜索商品、商品名称</navigator>
+  </view>
+<!--快捷搜索-->
+  <view class="quicklink">
+    <navigator url="/pages/search/search?key=啤酒" hover-class="hv"> 啤酒</navigator>
+    <navigator url="/pages/search/search?key=米线" hover-class="hv"> 米线</navigator>
+    <navigator url="/pages/search/search?key=凉皮" hover-class="hv"> 凉皮</navigator>
+    <navigator url="/pages/search/search?key=绿茶" hover-class="hv"> 绿茶</navigator>
+    <navigator url="/pages/search/search?key=冷面" hover-class="hv"> 冷面</navigator>
+  </view>
+ </view>
+
+
+<!--group-->
+ <view class="businesslist" bindtouchstart="bsts" bindtouchmove="bstm" bindtouchend="bste">
+    <view class="inner" style="left:{{business.ngx}}px;">
+      <view class="li">
+        
+          <navigator url="/pages/businesslist/businesslist?key=美食" hover-class="nhv">
+            <image src="../images/1.png"></image>
+            <view>美食</view>
+          </navigator>
+         
+          <navigator url="/pages/businesslist/businesslist?key=甜品饮品" hover-class="nhv">
+            <image src="../images/2.jpg"></image>
+            <view>甜品饮品</view>
+          </navigator>
+
+          <navigator url="url" hover-class="nhv">
+            <image src="../images/3.jpg"></image>
+            <view>超市</view>
+          </navigator>
+
+          <navigator url="url" hover-class="nhv">
+            <image src="../images/4.jpg"></image>
+            <view>果蔬</view>
+          </navigator>
+
+          <navigator url="url">
+            <image src="../images/5.png"></image>
+            <view>新店</view>
+          </navigator>
+
+          <navigator url="url">
+            <image src="../images/6.jpg"></image>
+            <view>准时达</view>
+          </navigator>
+
+          <navigator url="url">
+            <image src="../images/7.jpg"></image>
+            <view>简餐</view>
+          </navigator>
+
+          <navigator url="url">
+            <image src="../images/8.jpg"></image>
+            <view>汉堡</view>
+          </navigator>
+
+      </view>
+      <view class="li">
+           <navigator url="url">
+            <image src="../images/9.jpg"></image>
+            <view>粥</view>
+          </navigator>
+         
+          <navigator url="url">
+            <image src="../images/10.png"></image>
+            <view>鲜花</view>
+          </navigator>
+
+           <navigator url="url">
+            <image src="../images/11.jpg"></image>
+            <view>麻辣烫</view>
+          </navigator>
+           <navigator url="url">
+            <image src="../images/12.jpg"></image>
+            <view>地方菜</view>
+          </navigator> 
+          <navigator url="url">
+            <image src="../images/13.jpg"></image>
+            <view>披萨</view>
+          </navigator> 
+          <navigator url="url">
+            <image src="../images/14.jpg"></image>
+            <view>日韩料理</view>
+          </navigator>
+
+
+      </view>
+    </view>
+    <view class="ctrl">
+      <view class="{{bsactive[0]}}"></view>
+      <view class="{{bsactive[1]}}"></view>
+    </view>
+
+ </view>
+<!--recommend-->
+ <view class="recommend">
+  <view class="title">推荐商家</view>
+
+  <view class="bslist">
+      <navigator class="list" url="/pages/single/single" hover-class="nhv">
+        <view class="pic">
+          <image src="../images/dtimg.jpg"></image>
+        </view>
+        <view class="txt">
+          <view  class="h2">花鼠鲜花
+	    <view class="ticket"></view>
+	  </view>
+	  
+	  <view class="sell">
+	    <view class="star">
+	      <image src="../images/star.png"></image>
+	      <view class="bg"></view>
+	    </view>
+            <view class="score">4.5</view>
+            <view class="total">月售725单</view>
+	  </view>
+
+          
+	  <view class="info">
+	    <view>¥0元配送</view>|
+	    <view>配送费¥0</view>|
+	    <view>¥34/人 </view>
+            <view class="address"><text>3.05km |</text>30分钟</view>
+	  </view>
+           
+          <view class="hui">
+	    <text class="less">减</text>
+	    <text class="cnt">满100减50,满200减100</text>
+	  </view>
+          <view class="other">
+	    <text class="less">特</text>
+	    <text class="cnt">5折商品</text>
+	  </view>
+
+        </view>
+      </navigator><!--list-->
+      
+    
+
+
+<navigator class="list" url="/pages/single/single" hover-class="nhv">
+        <view class="pic">
+          <image src="../images/dtimg.jpg"></image>
+        </view>
+        <view class="txt">
+          <view  class="h2">花鼠鲜花
+	    <view class="ticket"></view>
+	  </view>
+	  
+	  <view class="sell">
+	    <view class="star">
+	      <image src="../images/star.png"></image>
+	      <view class="bg"></view>
+	    </view>
+            <view class="score">4.5</view>
+            <view class="total">月售725单</view>
+	  </view>
+
+          
+	  <view class="info">
+	    <view>¥0元配送 </view>|
+	    <view>配送费¥0 </view>|
+	    <view>¥34/人 </view>
+            <view class="address"><text>3.05km |</text>30分钟</view>
+	  </view>
+           
+          <view class="hui">
+	    <text class="less">减</text>
+	    <text class="cnt">满100减50,满200减100</text>
+	  </view>
+          <view class="other">
+	    <text class="less">特</text>
+	    <text class="cnt">5折商品</text>
+	  </view>
+
+        </view>
+      </navigator><!--list-->
+      
+
+
+
+
+  </view>
+ <!--下面列表-->
+ </view>
+<!--recommend-->
+
+
+
+  <view style="display:{{ld}}" class="loading" bindtap="tp"></view>
+</view>

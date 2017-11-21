@@ -1,0 +1,149 @@
+魏晓武  weixw@tedu.cn
+3天
+	(1天 公众号开发维护
+	2-3  小程序的开发)
+1.公众号
+ 为何微信课程
+  @受众广
+	@接口丰富
+	@兼容性强
+2.公众号是什么?
+ 运行于微信中能够提供商家宣传的平台
+  魏武科技
+  前端大全
+	海底捞火锅
+	前端早读课
+	菜鸟教程
+	web前端开发
+	javascript
+	PHP开发者
+	W3cplus
+
+3.公众号使用
+
+4. 公众号的维护
+  4.1申请 http://mp.weixin.qq.com
+     qq.com
+		   mail.qq.com
+	4.2注册->4种(订阅号)
+	4.34种账号区别
+	         @订阅号 发文章              1/1天
+					 @服务号 排队 订餐 充值      1/1周
+					 @小程序 app级
+					 @企业号 企业内部
+
+  4.4 个人版 订阅号 实际注册
+	    企业版 订阅号 (营业执照、对公账户、企业法人、管理员信息)
+      企业版 服务号 (营业执照、对公账户、企业法人、管理员信息)
+  4.5 ###搜索功能
+      @@@ logo 
+			    设置-公众号设置-隐私设置-允许
+  4.6 ###添加关注自动回复
+	    @@@ 被关注自动回复
+  4.7 ### 收到消息回复
+	    @@@ 自动回复-收到消息自动回复
+  4.8 ### 关键词自动回复
+	    @@@ 分类别回复
+  4.9 ### 自定义菜单
+	    
+			发送消息 
+			网址     网页 企业版 订阅号 服务号
+			小程序  
+
+	4.10 ### 新建图文消息
+	    
+
+4.xx  微信公众号 消息类别
+      1.纯文本 笑脸
+			2.图片
+			3.音频
+			4.视频
+			5.图文消息(news)
+
+5. 公众号的开发
+  5.1业务范围:无限制
+	     @@@ 公众号游戏开发 
+			 @@@ 测试预测游戏
+			 @@@ 证件类
+
+			 @@@ 交易  订单  排号  文章 公司官网
+   北京移动  海底捞火锅
+  5.2怎么做
+
+   $$$$ 放网页的空间 
+	       阿里云 美橙互联 西部数据 机房 51科技   
+				 新浪云
+  PHP+mysql空间
+        5.2.1如何购买51科技空间
+				  http://www.51cdz.com/
+					点击PHP空间
+       ftp地址  ftp名字  密码
+       IP地址
+	ftp16.idcay.com   web1706n  	80497A7296d222
+       111.68.14.164
+
+	 $$$$ 域名管理--域名解析 
+	     www.xyz.com
+			 认证的原因::钓鱼
+       icbc.com  icbc.com.cn
+       备案--- 身份证的复印件-身份信息-手机
+       3-5日
+			 解析---->高级解析--->主机名   对应值  
+			                      www.      ip 111.68.14.164
+	 $$$$ 配置
+      公众号设置--->js安全域名设置
+			flashfxp(qq)
+xwkj.org.cn/xz/index.html
+    
+   5.3制作代码上传
+    自定义菜单-->网址 企业订阅号
+		                  企业服务号
+		空间 购买(绑定)   
+		域名 购买       如何备案 绑定 在线咨询    
+											 
+    网页 html       
+    
+		上传下载
+
+   5.4微信开发的网站(微信站)  m.jd.com
+     @@@移动端网站
+		 @@@运行于微信中
+		 @@@接口 微信js-sdk接口
+     @@@ 开发者工具 开发文档-微信网页开发 js-sdk
+             weixin.js jquery.js
+
+http://xwkj.org.cn/weixin/xz/product_list.html
+
+wx.摄像头()  
+wx.支付()  wx.pay({})
+
+   5.5 安全域名设置
+	     引入js文件
+   script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"
+
+			 配置
+基本配置  启用
+@1appid  wx8460529c8128c4f8
+@2appsec 88fdb6ec630eeb6102cdccc42859cf0e
+@3https://mp.weixin.qq.com/debug
+@4access   
+KLbvtWD6JqzPmGjhaOBPWBUn9yzSJQ5Z3uUFw6XlwepZa8TNVk49PwjdCtE6UyJQskooTaHyKvqDejsp8YfU2BYaLCJSXRVrzZTMxKYxONMUBBhAEAMTT
+@5https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=你的access_token&type=jsapi
+ ticket
+kgt8ON7yVITDhtdwci0qeb9K_SA8WPe1NTDqHJ22kNLA_oYM8GdcdEZtOSY5x1oo3R4jbqTT5Z0Fx7qy2L_3sQ
+@
+
+			 调用
+			 测试
+
+
+
+
+
+微信公众号 维护开发80% 20%调用接口
+微信小程序  
+web前端
+Nodejs工程师
+大前端PHP方向
+网站制作
+ 作业:模仿 海底捞

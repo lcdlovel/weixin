@@ -1,0 +1,14 @@
+.top{ width: 100%;
+height: 30px;
+line-height: 30px;
+text-align: center;}
+.top view{ width: 33.33%;
+height: 30px;
+float: left;
+background-color: #0f0;}
+.top .active{ background:#f00; color:#fff;}
+.bottom{ width: 100%;
+height: 300px;
+background-color: #ccc;}
+.bottom view{ width: 100%;
+height: 300px;}
